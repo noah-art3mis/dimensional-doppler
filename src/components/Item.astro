@@ -1,0 +1,13 @@
+---
+const { value } = Astro.props;
+---
+
+<div class="item">
+  <p>{value ? "+" : "-"}</p>
+</div>
+
+<style>
+  .item {
+    background-color: black;
+  }
+</style>
