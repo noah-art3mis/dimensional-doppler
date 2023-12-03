@@ -1,0 +1,32 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+const { frontmatter } = Astro.props;
+const ttr = 10;
+const leiaTb = "x";
+---
+
+<BaseLayout pageTitle={frontmatter.title}>
+  <img
+    class="mainImg"
+    src={frontmatter.image.url}
+    alt={frontmatter.image.url}
+  />
+
+  <p><em>{frontmatter.description}</em></p>
+
+  <p>Written by {frontmatter.author}</p>
+  <p>Published on {frontmatter.pubDate}</p>
+
+  <p>Tags: {frontmatter.tags}</p>
+  <p>Time to read: {ttr}</p>
+
+  <slot />
+
+  <p>Leia também: {leiaTb}</p>
+
+  <style>
+    .mainImg {
+      max-width: 100%;
+    }
+  </style>
+</BaseLayout>
