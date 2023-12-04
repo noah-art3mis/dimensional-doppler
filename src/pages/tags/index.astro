@@ -1,16 +1,14 @@
 ---
-const { url, title, description, img, alt, tags} = Astro.props;
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const pageTitle = "Tags";
+const posts = await Astro.glob("../posts/*.md");
+const tags = [...new Set(posts.map((post) => post.frontmatter.tags).flat())];
 ---
 
-<div class="container">
-  <a href={url}>
-    <p>{title}</p>
-  </a>
-  <img src={img} alt={alt} />
-  <p><em>{description}</em></p>
+<BaseLayout pageTitle={pageTitle}>
   <div class="tags">
     {
-      tags?.map((tag: string) => (
+      tags.map((tag) => (
         <p>
           <a class="tag" href={`/tags/${tag}`}>
             {tag}
@@ -19,25 +17,9 @@ const { url, title, description, img, alt, tags} = Astro.props;
       ))
     }
   </div>
-</div>
+</BaseLayout>
 
 <style>
-  .container {
-    border: 2px solid black;
-  }
-  a > * {
-    text-decoration: none;
-  }
-
-  img {
-    max-width: 100%;
-    width: 100px;w
-  }
-</style>
-
-
-<style>
-  /* dry */
   a {
     color: #00539f;
   }
