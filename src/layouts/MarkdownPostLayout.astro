@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
+import { fade } from "astro:transitions";
 const { frontmatter } = Astro.props;
+
 const ttr = 10;
 const leiaTb = "x";
 ---
@@ -12,9 +14,11 @@ const leiaTb = "x";
     alt={frontmatter.image.url}
   />
 
-  <p><em>{frontmatter.description}</em></p>
+  <p>
+    <em>{frontmatter.description}</em>
+  </p>
 
-  <p>Written by {frontmatter.author}</p>
+  <p>Written by <a data-astro-reload href="/about/">{frontmatter.author}</a></p>
   <p>Published on {frontmatter.pubDate}</p>
 
   <p>Tags: {frontmatter.tags}</p>

@@ -2,10 +2,11 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 const pageTitle = "Gustavo Araújo Costa";
 import Social from "../components/Social.astro";
+import { fade } from "astro:transitions";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <h2>psicólogo e programador</h2>
+  <h2 transition:animate={fade({ duration: "1s" })}>psicólogo e programador</h2>
   <h3>psicanalista aderente de APOLa</h3>
 
   <ul>
