@@ -1,15 +1,14 @@
 ---
-const { icon, link } = Astro.props;
+const { link, src, alt } = Astro.props;
 ---
 
-<a href={link}>{icon}</a>
+<div class="icon">
+  <a href={link}><img src={src} alt={alt} /></a>
+</div>
 
 <style>
-  a {
-    padding: 0.5rem 1rem;
-    margin: 0.5rem 1rem;
-    color: white;
-    background-color: #4c1d95;
-    text-decoration: none;
+  .icon {
+    padding: 0.2rem 0.5rem;
+    margin: 0.2rem 0.5rem;
   }
 </style>

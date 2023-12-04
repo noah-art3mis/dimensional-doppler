@@ -8,17 +8,41 @@ import Social from "./Social.astro";
       >noah-art3mis</a
     >)
   </p>
-  <Social icon="" link="https://www.instagram.com/simulacro.psi/" />
-  <Social icon="" link="https://gustavocosta.psc.br/" />
-  <Social icon="" link="https://github.com/noah-art3mis" />
-  <Social icon="" link="https://noah-art3mis.itch.io/" />
-  <Social icon="" link="https://mastodon.gamedev.place/@noah_artemis" />
+  <div class="container">
+    <Social
+      src="../../public/instagram.svg"
+      alt="instagram"
+      link="https://www.instagram.com/simulacro.psi/"
+    />
+    <Social
+      src="../../public/site.svg"
+      alt="website"
+      link="https://gustavocosta.psc.br/"
+    />
+    <Social
+      src="../../public/github.svg"
+      alt="github"
+      link="https://github.com/noah-art3mis"
+    />
+    <Social
+      src="../../public/itch.svg"
+      alt="itch"
+      link="https://noah-art3mis.itch.io/"
+    />
+    <Social
+      src="../../public/mastodon.svg"
+      alt="mastodon"
+      link="https://mastodon.gamedev.place/@noah_artemis"
+    />
+  </div>
 </footer>
 
 <style>
   footer {
-    display: flex;
-    gap: 1rem;
     margin-top: 2rem;
+  }
+
+  .container {
+    display: flex;
   }
 </style>
