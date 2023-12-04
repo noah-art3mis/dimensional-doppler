@@ -1,11 +1,31 @@
 <div class="panel">
   <p>Control Panel</p>
 
-  <button id="reset">Reset</button>
-  <label>
-    <input type="checkbox" id="randomSeed" name="randomSeed" />
-     Random seed
-  </label>
+  <div class="panel-item">
+    <label for="seed">Seed</label>
+    <select id="seed" name="seed">
+      <option value="random">random</option>
+      <option value="binary">binary</option>
+    </select>
+  </div>
+
+  <div class="panel-item">
+    <label for="binary">Enter seed:</label>
+    <input type="text" id="binary" name="binary" placeholder="0100010101" />
+  </div>
+
+  <div class="panel-item">
+    <label for="animation">Animation:</label>
+    <select id="animation" name="animation">
+      <option value="off">off</option>
+      <option value="on">on</option>
+      <option value="fast">fast</option>
+    </select>
+  </div>
+
+  <div class="panel-item">
+    <button id="reset">Reset</button>
+  </div>
 </div>
 
 <style>
@@ -13,12 +33,16 @@
     position: fixed;
     top: 20px; /* Adjust as needed */
     left: 20px; /* Adjust as needed */
-    background-color: #f1f1f1;
-    padding: 15px;
-    border: 1px solid #ccc;
+    padding: 1rem;
+    border: 1px solid #fffff8;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: baseline;
+    flex-flow: column;
+    gap: 1rem;
   }
   button {
     display: block;
+    margin: 1rem;
   }
 </style>

@@ -3,7 +3,8 @@ import "../styles/global.css";
 import Item from "../components/Item.astro";
 import ControlPanel from "../components/ControlPanel.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-const seed: number[] = [0, 1, 0, 1]; // TODO
+import Cursor from "../components/Cursor.astro";
+const seed: number[] = [0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1]; // TODO
 const pageTitle = "Rep";
 ---
 
@@ -13,7 +14,21 @@ const pageTitle = "Rep";
   <div class="one">
     {seed.map((item) => <Item value={item} />)}
   </div>
+  <div class="two">
+    <Cursor />
+  </div>
   <script>
     import "../scripts/one.js";
+    import "../scripts/two.js";
   </script>
 </BaseLayout>
+
+<style>
+  .one {
+    display: flex;
+    gap: 1rem;
+    align-items: baseline;
+    font-weight: bold;
+    margin: 4rem;
+  }
+</style>

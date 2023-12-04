@@ -5,7 +5,7 @@ import ThemeIcon from "./ThemeIcon.astro";
 ---
 
 <header>
-  <nav>
+  <nav transition:animate="slide">
     <Hamburger />
     <ThemeIcon />
     <Navigation />
@@ -14,8 +14,11 @@ import ThemeIcon from "./ThemeIcon.astro";
 
 <style>
   header {
-    background-color: #fff;
     margin: 1rem;
     padding: 1rem;
+  }
+
+  nav {
+    display: flex;
   }
 </style>

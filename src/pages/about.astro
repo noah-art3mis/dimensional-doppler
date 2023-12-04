@@ -1,21 +1,79 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-const pageTitle = "About";
+const pageTitle = "Gustavo Araújo Costa";
+import Social from "../components/Social.astro";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <h2>Gustavo Araújo Costa</h2>
-  <p>psicólogo e programador</p>
-  <p>psicanalista aderente de APOLa</p>
+  <h2>psicólogo e programador</h2>
+  <h3>psicanalista aderente de APOLa</h3>
 
   <ul>
-    <li>Instagram</li>
-    <li>Blog</li>
-    <ul><li>Texto</li></ul>
-    <li>Github</li>
-    <ul><li>WEAV</li></ul>
-    <li>Itch</li>
-    <ul><li>LTLTL</li></ul>
-    <li>Mastodon</li>
+    <li>
+      <Social
+        src="../../instagram.svg"
+        alt="instagram"
+        link="https://www.instagram.com/simulacro.psi/"
+      />
+    </li>
+    <li>
+      <Social
+        src="../../site.svg"
+        alt="website"
+        link="https://gustavocosta.psc.br/"
+      />
+    </li>
+    <ul>
+      <li>
+        <p>
+          Artigo:
+          <a
+            href="https://gustavocosta.psc.br/resignarse-ao-real-lacan-e-o-fascinio-pelo-inefavel/"
+            >Resignar-se ao Real: Lacan e o fascínio pelo inefável</a
+          >
+        </p>
+      </li>
+    </ul>
+    <li>
+      <Social
+        src="../../github.svg"
+        alt="github"
+        link="https://github.com/noah-art3mis"
+      />
+    </li>
+    <ul>
+      <li>
+        <p>
+          Ferramenta:
+          <a href="https://github.com/noah-art3mis/WEAV">WEAV</a>
+           : Wolfram Elementary Automata Visualization
+        </p>
+      </li>
+    </ul>
+    <li>
+      <Social
+        src="../../itch.svg"
+        alt="itch"
+        link="https://noah-art3mis.itch.io/"
+      />
+    </li>
+    <ul>
+      <li>
+        <p>
+          Jogo:
+          <a href="https://noah-art3mis.itch.io/learning-to-love-the-labyrinth"
+            >LTLTL</a
+          >
+           : learning to love the labyrinth
+        </p>
+      </li>
+    </ul>
+    <li>
+      <Social
+        src="../../mastodon.svg"
+        alt="mastodon"
+        link="https://mastodon.gamedev.place/@noah_artemis"
+      />
+    </li>
   </ul>
 </BaseLayout>

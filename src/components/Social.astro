@@ -3,12 +3,13 @@ const { link, src, alt } = Astro.props;
 ---
 
 <div class="icon">
-  <a href={link}><img src={src} alt={alt} /></a>
+  <a href={link}>
+    <img src={src} alt={alt} />
+  </a>
 </div>
 
 <style>
   .icon {
     padding: 0.2rem 0.5rem;
-    margin: 0.2rem 0.5rem;
   }
 </style>

@@ -20,9 +20,7 @@ const tags = [...new Set(posts.map((post) => post.frontmatter.tags).flat())];
 </BaseLayout>
 
 <style>
-  a {
-    color: #00539f;
-  }
+  /* dry */
 
   .tags {
     display: flex;
@@ -31,10 +29,9 @@ const tags = [...new Set(posts.map((post) => post.frontmatter.tags).flat())];
 
   .tag {
     margin: 0.25em;
-    border: dotted 1px #a1a1a1;
     border-radius: 0.5em;
     padding: 0.5em 1em;
     font-size: 1.15em;
-    background-color: #f8fcfd;
+    background-color: darkred;
   }
 </style>

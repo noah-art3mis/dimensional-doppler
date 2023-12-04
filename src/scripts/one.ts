@@ -15,7 +15,7 @@ console.log(seed);
 const resetBtn = document.getElementById("reset");
 document.addEventListener("astro:page-load", () => {
   resetBtn?.addEventListener("click", () => {
-    alert("button clicked");
     reset();
+    console.log(seed);
   });
 });
